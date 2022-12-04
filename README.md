@@ -8,7 +8,7 @@ HTML, CSS, JavaScript.
 
 ## Link
 
-Give it a try from <a href="https://philip-droubi.github.io/Red_Swap_Blue/" target="_blank">HERE</a>
+Give it a try from [HERE](https://philip-droubi.github.io/Red_Swap_Blue/){:target="_blank"}
 
 ## Hint
 

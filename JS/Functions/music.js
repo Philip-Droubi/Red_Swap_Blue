@@ -30,6 +30,6 @@ musicBtn.onclick = () => {
 }
 
 export function winSound() {
-    let winSound = new Audio('/win.m4a')
+    let winSound = new Audio('/win.mp3')
     winSound.play();
 }

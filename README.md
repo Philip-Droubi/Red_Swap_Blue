@@ -8,7 +8,7 @@ HTML, CSS, JavaScript.
 
 ## Link
 
-Give it a try from [HERE](https://philip-droubi.github.io/Red_Swap_Blue/)
+Give it a try from [HERE](https://philip-droubi.github.io/Red_Swap_Blue/).
 
 ## Hint
 

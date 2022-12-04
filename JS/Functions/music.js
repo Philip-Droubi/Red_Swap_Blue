@@ -30,6 +30,6 @@ musicBtn.onclick = () => {
 }
 
 export function winSound() {
-    let winSound = new Audio('https://github.com/Philip-Droubi/Red_Swap_Blue/blob/main/Sounds/win.m4a?raw=true')
+    let winSound = new Audio('/win.m4a')
     winSound.play();
 }

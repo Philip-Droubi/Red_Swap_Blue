@@ -1,0 +1,162 @@
+<!-- CRETEAD BY PHILIP DROUBI -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RSB</title>
+    <meta name="description" content="Red Swap Blue Game userPlay, sDFS, BFS, A* solution">
+    <meta name="keywords"
+        content="Red, Blue, Red swap Blue, HTML, CSS, JavaScript, JS, Philip, Droubi, DFS, BFS, A*, Browser game">
+    <meta name="author" content="Philip Droubi">
+    <meta name='designer' content='Philip Droubi'>
+    <meta name='owner' content='Philip Droubi'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/Normalize.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/Board.css">
+    <link rel="stylesheet" href="CSS/chosenSolve.css">
+</head>
+
+<body>
+    <div class="win">
+        <p>YOU WIN 🤩💃🏼🥳</p>
+    </div>
+    <div class="dev-view hidden">
+        <p>UI</p>
+    </div>
+    <div class="music">
+        <p><i class="fas fa-volume-mute    "></i></i></p>
+    </div>
+    <div class="NOMoves hidden">
+        <h5>moves</h5>
+        <div class="text">
+            <p class="number">
+                50
+            </p>
+            <p class="emoji">
+                😎
+            </p>
+        </div>
+        <div class="time">
+            <span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">0</span>
+        </div>
+    </div>
+    <div class="print-graph hidden">
+        <p>Print Graph Nodes</p>
+    </div>
+    <header>
+        <div class="container">
+            <h1>Red Swap Blue</h1>
+            <h1>RSB</h1>
+        </div>
+    </header>
+    <main>
+        <div class="back hidden">
+            <button><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back To Main</button>
+        </div>
+        <div class="links">
+            <div class="container">
+                <ul>
+                    <li><button class="P1-btn play"><i class="fas fa-play    "></i> PLAY</button></li>
+                    <li><button class="P1-btn about"><i class="fas fa-cog    "></i> ABOUT</button></li>
+                    <li><button class="P1-btn how"><i class="fas fa-question    "></i> HOW TO PLAY</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="levels hidden">
+            <div class="container">
+                <ul>
+                    <li>
+                        <div class="level" data-n="2">
+                            <h2>level 1</h2>
+                            <img src="Images/board/n2.PNG" alt="level 1 image">
+                            <div class="info">
+                                <p>N = 2</p>
+                                <p><span class="red">R = 3</span> , <span class="blue">B = 3</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="level" data-n="3">
+                            <h2>level 2</h2>
+                            <img src="Images/board/n3.PNG" alt="level 2 image">
+                            <div class="info">
+                                <p>N = 3</p>
+                                <p><span class="red">R = 8</span> , <span class="blue">B = 8</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="level" data-n="4">
+                            <h2>level 3</h2>
+                            <img src="Images/board/n4.PNG" alt="level 3 image">
+                            <div class="info">
+                                <p>N = 4</p>
+                                <p><span class="red">R = 15</span> , <span class="blue">B = 15</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <div class="level" data-n="19">
+                            <h2>level 4</h2>
+                            <img src="Images/sub.jpg" alt="level 3 image">
+                            <div class="info">
+                                <p>N = 5</p>
+                                <p><span class="red">R = 24</span> , <span class="blue">B = 24</span></p>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="how-to-solve hidden">
+            <div class="container">
+                <div class="user-play" data-choice="UP" data-n="">User Play</div>
+                <div class="DFS" data-choice="DFS" data-n="">DFS</div>
+                <div class="BFS" data-choice="BFS" data-n="">BFS</div>
+                <div class="UCS" data-choice="UCS" data-n="">UCS</div>
+                <div class="A*" data-choice="A*" data-n="">A*</div>
+            </div>
+        </div>
+
+        <div class="htp hidden">
+            <div class="container">
+                <div class="info">
+                    <h2>Instructions <i class="fa fa-info-circle" aria-hidden="true"></i></h2>
+                    <p>
+                        ◼ Swap the position of the tow sets of arrow with as few moves as possible.
+                        <span></span>
+                        ◼ You can move the cells by clicking them.
+                        <span></span>
+                        ◼ A cell can be moved to the empty space if it was adjacent to the space, or when another cell
+                        is
+                        located between the moving cell and the empty space.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            Create By <a href="https://github.com/Philip-Droubi" target="_blank" rel="noopener noreferrer">Philip
+                Droubi</a>
+        </div>
+    </footer>
+    <script src="JS/Get_Second_Page.js" type="module"></script>
+    <script src="JS/main.js" type="module"></script>
+    <script src="JS/classes/create2DArray.js" type="module"></script>
+    <script src="JS/classes/board.js" type="module"></script>
+    <script src="JS/classes/Graph.js" type="module"></script>
+    <script src="JS/Functions/music.js" type="module"></script>
+    <script src="JS/Functions/UI.js" type="module"></script>
+</body>
+
+</html>

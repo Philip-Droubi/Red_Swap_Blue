@@ -1,0 +1,72 @@
+/* CREATED BY PHILIP DROUBI */
+.cell {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.18s;
+}
+
+.rCell {
+    background-color: var(--red-block);
+    cursor: cell;
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 0px 4px 0 #85484845;
+}
+
+.bCell {
+    background-color: var(--blue-block);
+    cursor: cell;
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 3px 4px 1px #5c313183;
+
+}
+
+.wCell {
+    background-color: whitesmoke;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+
+}
+
+.wCell::after,
+.bCell::after,
+.rCell::after {
+    font-weight: 800;
+    font-size: 40px;
+    position: absolute;
+    transform: rotate(45deg);
+    opacity: 1;
+    /* transition: 0.25s; */
+}
+
+.rCell::after {
+    content: attr(data-after);
+}
+
+.bCell::after {
+    content: attr(data-after);
+}
+
+.blank {
+    border-color: transparent;
+    background-color: transparent;
+    transition: 0.25s;
+}
+
+.game {
+    display: grid;
+    transform: rotate(-45deg);
+    transition: 0.2s;
+}
+
+.wCell::after {
+    content: "";
+    opacity: 0;
+}
+
+.grid {}

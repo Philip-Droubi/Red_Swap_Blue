@@ -2,7 +2,7 @@
 
 let musicStart = false;
 let music = false
-let gameMusic = new Audio('../Sounds/game.webm');
+let gameMusic = new Audio('Sounds/game.webm');
 gameMusic.valume = 0.1;
 gameMusic.loop = true;
 let movesNum = 0;
